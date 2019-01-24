@@ -370,6 +370,15 @@ class CheckAzurermMonitorMetric < Sensu::Plugin::Check::CLI
     error_type = verify_result(aggregated_value)
 
     return_error_message(error_type, request_values[0][:name], aggregated_value)
+
+    puts("Request values")
+    puts(request_values)
+
+    puts("Aggregated value")
+    puts(aggregated_value)
+    
+    puts("Error type")
+    puts(error_type)
   end
 
   def extract_request_values
